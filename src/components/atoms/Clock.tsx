@@ -6,7 +6,7 @@ interface props {
   text: string;
 }
 
-const Clock = (props: props) => {
+const Clock = (props: props):JSX.Element => {
   const { limit, text } = props;
   const [ time , setTime ] = useState<number>(0);
 
@@ -18,13 +18,7 @@ const Clock = (props: props) => {
   useEffect(() => {
     
     const timer = setTimeout(()=>{ setTime(time-1) },1000);
-
-    if(time >= -1){
-      
-    } else {
-      clearTimeout(timer);
-    }
-    
+    if( time<-1 ) clearTimeout(timer);
     return () => {
       clearTimeout(timer);
     };

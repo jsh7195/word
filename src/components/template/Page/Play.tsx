@@ -6,7 +6,7 @@ import Button from "@atoms/Button";
 import { cloneDeep } from "lodash";
 import { WordsItem } from '@lib/data';
 
-const Play = () => {
+const Play = ():JSX.Element => {
   const history = useHistory();
   const inputFocus = useRef<HTMLInputElement>(null);
 
@@ -22,7 +22,7 @@ const Play = () => {
 
   useEffect(() => {
     if(inputFocus.current) inputFocus.current.focus();
-    let getWords = sessionStorage.getItem("words");
+    const getWords = sessionStorage.getItem("words");
     if (getWords) {
       const parseWords = JSON.parse(getWords);
       setWords(parseWords);
@@ -54,7 +54,7 @@ const Play = () => {
 
       //시간제한 - 다음문제
       const processWords = setTimeout(() => {
-        let cloenArray = cloneDeep(wordsClone);
+        const cloenArray = cloneDeep(wordsClone);
         cloenArray[index].spend = second;
         cloenArray[index].success = false;
         setWordsClone(cloenArray);
@@ -76,7 +76,7 @@ const Play = () => {
     if (e.key === "Enter") {
       const validResult = userInputText === text;
       if (validResult) {
-        let cloenArray = cloneDeep(wordsClone);
+        const cloenArray = cloneDeep(wordsClone);
         cloenArray[index].spend = spend;
         cloenArray[index].success = validResult;
         setWordsClone(cloenArray);

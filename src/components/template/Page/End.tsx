@@ -5,7 +5,7 @@ import { WordsItem } from "@lib/data";
 import Button from "@atoms/Button";
 import Point from '@atoms/Point';
 
-const End = () => {
+const End = ():JSX.Element => {
   const location = useLocation();
   const [ point, setPoint ] = useState(0);
   const [ avrTime, setAvrTime ] = useState(0);
