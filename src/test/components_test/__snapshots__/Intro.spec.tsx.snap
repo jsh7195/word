@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Intro Render Test ... <Intro/> 1`] = `
+<div>
+  <div>
+    <h5>
+      문제 단어
+    </h5>
+  </div>
+  <div>
+    <button>
+      <a
+        href="/Play"
+        onClick={[Function]}
+      >
+        시작
+      </a>
+    </button>
+  </div>
+</div>
+`;

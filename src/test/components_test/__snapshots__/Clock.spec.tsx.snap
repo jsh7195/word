@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Clock Render Test ... <Clock/> 1`] = `
+<div>
+  <span
+    id="timer"
+  >
+    0
+     
+  </span>
+   / 
+  9
+</div>
+`;

@@ -1,10 +1,7 @@
 import React from "react";
+import {PointType} from '@lib/data';
 
-interface props {
-  point: number;
-}
-
-const Point = (props: props):JSX.Element => {
+const Point = (props: PointType):JSX.Element => {
   const { point } = props;
   return <span>점수 : {point ? point : 0} 점</span>;
 };

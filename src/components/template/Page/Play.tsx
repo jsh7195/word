@@ -5,6 +5,7 @@ import Point from "@atoms/Point";
 import Button from "@atoms/Button";
 import { cloneDeep } from "lodash";
 import { WordsItem } from '@lib/data';
+import { InputStyle, DivButtonStyle, WordDisplayDIvStyle, TimePointDiv } from '@template/style';
 
 const Play = ():JSX.Element => {
   const history = useHistory();
@@ -13,8 +14,8 @@ const Play = ():JSX.Element => {
   //let processWords;
   const [words, setWords] = useState<WordsItem[]>([]); // 전체단어
   const [wordsClone, setWordsClone] = useState<WordsItem[]>([]); // 전체단어
-  const [userInputText, setUserInputText] = useState(""); // 사용자 입력단어
-  const [text, setText] = useState(""); // 단어
+  const [userInputText, setUserInputText] = useState(''); // 사용자 입력단어
+  const [text, setText] = useState(''); // 단어
   const [time, setTime] = useState(0); // 시간
   const [index, setIndex] = useState(0);
   const [spend, setSpend] = useState(0);
@@ -22,7 +23,7 @@ const Play = ():JSX.Element => {
 
   useEffect(() => {
     if(inputFocus.current) inputFocus.current.focus();
-    const getWords = sessionStorage.getItem("words");
+    const getWords = sessionStorage.getItem('words');
     if (getWords) {
       const parseWords = JSON.parse(getWords);
       setWords(parseWords);
@@ -82,7 +83,7 @@ const Play = ():JSX.Element => {
         setWordsClone(cloenArray);
         setIndex(index + 1); // 다음문제
       }
-      setUserInputText("");
+      setUserInputText('');
     }
   };
 
@@ -93,30 +94,31 @@ const Play = ():JSX.Element => {
 
   return words && words.length > 0 ? (
     <div>
-      <div>
+      <TimePointDiv>
         <Clock limit={time} index={index} text={text} /> <Point point={point}/>
-      </div>
-      <div>
+      </TimePointDiv>
+      <WordDisplayDIvStyle>
         <h5>문제 단어</h5>
         <h1>{text}</h1>
-      </div>
+      </WordDisplayDIvStyle>
       <div>
         <h5>
-          <input
+          <InputStyle
             value={userInputText}
             onChange={onChangeHandler}
             onKeyPress={inputEnterHandler}
             ref={inputFocus}
+            placeholder={text}
           />
         </h5>
       </div>
-      <div>
+      <DivButtonStyle>
         <Button
           text="초기화"
           url="/Intro"
           // onClick={() => history.replace("/Intro")}
         />
-      </div>
+      </DivButtonStyle>
     </div>
   ) : (
     <div>Loading...</div>

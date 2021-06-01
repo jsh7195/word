@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`End Render Test ... <End/> 1`] = `
+<div>
+  <div>
+    결과화면
+  </div>
+  <span>
+    평균 소요시간 : 
+  </span>
+  0
+   
+  <br />
+  <span>
+    점수 : 
+    0
+     점
+  </span>
+   
+  <br />
+  <button>
+    <a
+      href="/Intro"
+      onClick={[Function]}
+    >
+      다시시작
+    </a>
+  </button>
+</div>
+`;

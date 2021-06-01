@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Point Render Test ... <Point/> 1`] = `
+<span>
+  점수 : 
+  5
+   점
+</span>
+`;

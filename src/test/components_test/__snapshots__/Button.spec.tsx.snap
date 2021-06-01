@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Render Test ... <Button/> 1`] = `
+<button>
+  <a
+    href="/Intro"
+    onClick={[Function]}
+  >
+    Button junit test
+  </a>
+</button>
+`;

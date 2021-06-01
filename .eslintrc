@@ -13,6 +13,9 @@
   "rules": {
     "no-console": 1,
     "no-loops/no-loops": 2,
-    "@typescript-eslint/no-explicit-any": "off"
+    "@typescript-eslint/no-explicit-any": "off",
+    "no-undef": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off"
   }
 }

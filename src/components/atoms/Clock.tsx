@@ -1,12 +1,8 @@
 import React, { useEffect, useState } from "react";
+import { ClockType } from '@lib/data';
+import { ClockStyle } from '@atoms/style';
 
-interface props {
-  limit: number;
-  index: number;
-  text: string;
-}
-
-const Clock = (props: props):JSX.Element => {
+const Clock = (props: ClockType):JSX.Element => {
   const { limit, text } = props;
   const [ time , setTime ] = useState<number>(0);
 
@@ -25,9 +21,9 @@ const Clock = (props: props):JSX.Element => {
   }, [text,time]);
 
   return (
-    <div>
-      <span id="timer">{time} </span> / {limit}
-    </div>
+    <ClockStyle>
+      <span id="timer">남은 시간: {time} </span> / {limit}
+    </ClockStyle>
   );
 };
 

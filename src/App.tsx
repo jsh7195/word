@@ -2,7 +2,7 @@ import React from 'react';
 import Main from '@template/MainPage';
 
 
-function App():JSX.Element {
+function App() {
   return <Main />;
 }
 

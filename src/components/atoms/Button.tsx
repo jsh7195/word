@@ -1,19 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
-interface props {
-  text: string;
-  url: string;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  onClick?: any;
-}
+import { ButtonType } from "@lib/data";
+import { ButtonStyle } from "./style";
 
-const Button = (props: props):JSX.Element => {
+const Button = (props: ButtonType): JSX.Element => {
   const { text, onClick, url } = props;
 
   return (
-    <button onClick={onClick}>
-      <Link to={url}>{text}</Link>
-    </button>
+    <Link to={url}>
+      <ButtonStyle onClick={onClick}>{text}</ButtonStyle>
+    </Link>
   );
 };
 

@@ -6,6 +6,7 @@ const Menu = [
   { id: "Intro", component: Intro, link: "/Intro" },
   { id: "Play", component: Play, link: "/Play" },
   { id: "End", component: End, link: "/End" },
+  { id: "wild", component: Intro, link: "/*" },
 ];
 
 const MainPage = ():JSX.Element => {
